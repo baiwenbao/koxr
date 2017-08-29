@@ -5,7 +5,7 @@ export default (fn, context) => {
     fn.result = fn.call(context);
     endCollect();
     return () => {
-        const {key, result} = fn;
+        const {result} = fn;
         if (result) {
             return result;
         }
