@@ -17,7 +17,7 @@
   },
   "name": "koxr",
   "description": "react状态管理库",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib"
