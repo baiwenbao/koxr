@@ -38,8 +38,8 @@ export const dispose = (key, fn) => {
 export const triggerObserver = () => {
     if (!observerCollecter.length) return;
     const filterRepeatAction = Array.from(new Set(observerCollecter));
-    const observers = filterRepeatAction.reduce((prev, next) => {
-        return prev.concat(store[next]);
+    const observers = filterRepeatAction.reduce((arr, key) => {
+        return arr.concat(store[key]);
     }, []);
     const filterObservers = Array.from(new Set(observers));
     filterObservers.forEach(fn => {
