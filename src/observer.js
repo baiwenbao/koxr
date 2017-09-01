@@ -1,11 +1,12 @@
 import autorun from './autorun';
-import React, {Component} from 'react';
+import React from 'react';
+import PureComponent from './util';
 import {beginCollect, endCollect} from './manager';
 
 const observer = Target => {
     const {render, componentWillMount, componentDidMount} = Target.prototype;
     if (!render) {
-        return class extends Component {
+        return class extends PureComponent {
             componentWillMount() {
                 beginCollect(() => {
                     this.forceUpdate();
