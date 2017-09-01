@@ -8,8 +8,7 @@ export const observableValue = (target, key) => {
         if (args.length === 0) {
             collect(key);
             return cache;
-        }
-        if (args[0] !== cache) {
+        } else if (args[0] !== cache) {
             cache = args[0];
             trigger(key);
         }
