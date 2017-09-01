@@ -3,11 +3,11 @@ react状态管理库
 
 API
 ### observable
-参数为非数组, 普通observable对象;
+参数为非数组, 普通observable变量;
 ```
 const observableValue = observable(0);
 ```
-定义一个初始值为0的observable对象
+定义一个初始值为0的observable变量
 ```
 observableValue(1);
 ```
