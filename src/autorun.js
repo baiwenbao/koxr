@@ -5,6 +5,9 @@ export default (fn, context) => {
     fn.call(context);
     endCollect();
     return () => {
-        dispose(fn.key, fn);
+        const {keys} = fn;
+        keys.forEach(key => {
+            dispose(key, fn);
+        });
     };
 };

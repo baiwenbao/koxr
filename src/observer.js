@@ -1,4 +1,3 @@
-import autorun from './autorun';
 import React from 'react';
 import {PureComponent} from './util';
 import {beginCollect, endCollect} from './manager';

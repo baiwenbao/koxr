@@ -17,8 +17,8 @@ observableValue();
 ```
 observableValue get操作
 
-参数为数组, 在普通observable对象上扩展['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift']等方法;
-```
+参数为数组, 在普通observable变量上扩展['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift']等方法;
+```
 const observableArray = observable([]);
 observableArray.push(0);
 observableArray.push(1);
@@ -31,7 +31,7 @@ const destory = autorun(() => {
     console.log(observableValue())
 });
 ```
-observableValue 进行set操作, 都会触发log方法, 执行destory方法终观察,一般处理副作用
+observableValue 进行set操作, 都会触发log方法, 执行destory方法终止观察,一般处理副作用
 
 ### computed
 ```

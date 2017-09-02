@@ -24,7 +24,8 @@ export const collect = key => {
     const stack = store[key];
     if (curObserver && !stack.includes(curObserver)) {
         stack.push(curObserver);
-        curObserver.key = key;
+        curObserver.keys = curObserver.keys || [];
+        curObserver.keys.push(key);
     }
 };
 
@@ -43,6 +44,9 @@ export const triggerObserver = () => {
     }, []);
     const filterObservers = Array.from(new Set(observers));
     filterObservers.forEach(fn => {
+        if (typeof fn !== 'function') {
+            return;
+        }
         const {context} = fn;
         fn.result = fn.call(context);
     });
