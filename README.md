@@ -1,5 +1,10 @@
 # koxr
-react状态管理库
+react兼容ie8状态管理库
+
+INSTALL
+```
+npm install koxr
+```
 
 API
 ### observable
