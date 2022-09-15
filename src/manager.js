@@ -1,5 +1,7 @@
 const store = {};
 let curObserver;
+
+// 待更新队列
 let observerCollecter = [];
 
 export const observerCollect = key => {
